@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zett Catalog</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <style>
+    .catalog-hero{margin-top:var(--header-height);background:var(--primary-gradient);color:#fff;text-align:center;padding:3rem 1rem;border-bottom:1px solid var(--text-light)}
+    .catalog-hero h1{font-size:clamp(2rem,5vw,2.6rem);font-weight:800}
+    .catalog-hero p{opacity:.95;margin-top:.75rem}
+
+    .section{padding:3rem 1.5rem;max-width:1200px;margin:0 auto}
+
+    /* Match index card sizing/feel */
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(var(--card-min), 1fr));
+      gap:1.5rem;
+      justify-items:center; /* center fixed-width cards */
+    }
+    .product-grid .product-card{
+      width:100%;
+      max-width:var(--card-max);  /* same as index desktop card */
+    }
+    @media (max-width:1023.98px){
+      .product-grid .product-card{ max-width:var(--card-min); } /* same as index mobile card */
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="nav-container">
+      <div class="logo">Zett</div>
+      <nav class="nav-menu" id="navMenu">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#catalog">Catalog</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="index.html#about">About Brand</a></li>
+        <li><a href="index.html#service">Service Info</a></li>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-switcher" id="langSwitcher">
+          <span class="lang-flag" data-lang="uz">🇺🇿</span>
+          <div class="lang-options"></div>
+        </div>
+        <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="catalog-hero" id="top">
+    <h1 id="catalogTitle">All Products</h1>
+    <p class="filter-note" id="filterNote"></p>
+  </section>
+
+  <main class="section">
+    <div class="product-grid" id="grid"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section"><h3>Contact Info</h3><div class="contact-info"><a href="tel:+998712345678" class="contact-item"><span>📞</span><span>+998 71 234 56 78</span></a></div></div>
+      <div class="footer-section"><h3>About Brand</h3><a href="about.html#about-top" class="about-brand-link">Learn About Us</a></div>
+      <div class="footer-section"><h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/zettechuz" class="social-icon" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><radialGradient id="yOrnnhliCrdS2gy~4tD8ma" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fd5"/><stop offset=".328" stop-color="#ff543f"/><stop offset=".348" stop-color="#fc5245"/><stop offset=".504" stop-color="#e64771"/><stop offset=".643" stop-color="#d53e91"/><stop offset=".761" stop-color="#cc39a4"/><stop offset=".841" stop-color="#c837ab"/></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8ma)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20 c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20 C42.014,38.383,38.417,41.986,34.017,41.99z"/><radialGradient id="yOrnnhliCrdS2gy~4tD8mb" cx="11.786" cy="5.54" r="29.813" gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4168c9"/><stop offset=".999" stop-color="#4168c9" stop-opacity="0"/></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8mb)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20 c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20 C42.014,38.383,38.417,41.986,34.017,41.99z"/><path fill="#fff" d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5  s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"/><circle cx="31.5" cy="16.5" r="1.5" fill="#fff"/><path fill="#fff" d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12  C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"/></svg>
+          </a>
+          <a href="https://t.me/Zettech_uz" class="social-icon" aria-label="Telegram">
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="#29b6f6" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"/><path fill="#fff" d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z"/><path fill="#b0bec5" d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z"/><path fill="#cfd8dc" d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 Zett. All rights reserved.</p></div>
+  </footer>
+
+  <!-- Shared modal -->
+  <!-- Shared modal -->
+  <div class="modal" id="orderModal">
+    <div class="modal-content">
+      <h3 class="modal-title" id="modalTitle">Order Product</h3>
+      <form id="orderForm">
+        <div class="form-group">
+          <label for="customerName"><span id="labelCustomerName">Full Name</span></label>
+          <input type="text" id="customerName" required placeholder="e.g. Isaac Newton">
+        </div>
+        <div class="form-group">
+          <label for="customerPhone"><span id="labelCustomerPhone">Phone Number</span></label>
+          <input type="tel" id="customerPhone" value="+998" required placeholder="+998 XX XXX XX XX">
+        </div>
+        <div class="modal-buttons">
+          <button type="submit" class="btn-submit" id="btnSubmitOrder">Submit Order</button>
+          <button type="button" class="btn-cancel" id="btnCancel" onclick="closeModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="js/i18n.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/catalog-page.js"></script>
+</body>
+</html>
