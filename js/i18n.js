@@ -23,10 +23,10 @@ window.ZETT_I18N = {
         <h3>We design and sell:</h3>
         <ul><li>laptops</li><li>tablets</li><li>smartphones</li><li>smart accessories</li></ul>
         <p>Every Zett device combines high-end technology, stylish design, and premium quality — including premium packaging that’s a joy to receive and gift.</p>
-        <h3>🌍 Where we operate</h3>
+        <h3> Where we operate</h3>
         <p>In Uzbekistan, Zett products are available online and via partner networks. We provide an official 12-month service warranty nationwide.</p>
         <p>In Kazakhstan, the brand is available via the Zett.kz website. We continue expanding in international markets.</p>
-        <h3>💡 Why Zett?</h3>
+        <h3> Why Zett?</h3>
         <ul>
           <li>Devices created in the spirit of Gen Z</li>
           <li>Premium tech and packaging without overpaying</li>
@@ -64,10 +64,10 @@ window.ZETT_I18N = {
         <h3>Мы разрабатываем и продаём:</h3>
         <ul><li>ноутбуки</li><li>планшеты</li><li>смартфоны</li><li>умные аксессуары</li></ul>
         <p>Каждое устройство Zett — это сочетание высоких технологий, стильного дизайна и премиального качества, включая премиум-упаковку, которую приятно получить и подарить.</p>
-        <h3>🌍 Где мы работаем</h3>
+        <h3> Где мы работаем</h3>
         <p>В Узбекистане продукция Zett доступна онлайн и через партнёрские сети. Мы предоставляем официальную сервисную гарантию 12 месяцев по всей стране.</p>
         <p>В Казахстане бренд представлен через сайт Zett.kz. Мы продолжаем расширять присутствие на международных рынках.</p>
-        <h3>💡 Почему Zett?</h3>
+        <h3> Почему Zett?</h3>
         <ul>
           <li>Устройства, созданные в духе поколения Z</li>
           <li>Премиум-техника и упаковка без переплаты</li>
@@ -105,10 +105,10 @@ window.ZETT_I18N = {
         <h3>Biz ishlab chiqamiz va sotamiz:</h3>
         <ul><li>noutbuklar</li><li>planshetlar</li><li>smartfonlar</li><li>aqlli aksessuarlar</li></ul>
         <p>Har bir Zett qurilmasi — bu yuqori texnologiyalar, zamonaviy dizayn va premium sifat uyg‘unligi. Qadoqlash ham premium — olish va sovg‘a qilish yoqimli.</p>
-        <h3>🌍 Qayerda ishlaymiz</h3>
+        <h3> Qayerda ishlaymiz</h3>
         <p>O‘zbekistonda Zett mahsulotlari onlayn va hamkor tarmoqlar orqali mavjud. Mamlakat bo‘ylab 12 oylik rasmiy servis kafolatimiz bor.</p>
         <p>Qozog‘istonda brend Zett.kz sayti orqali taqdim etilgan. Biz xalqaro bozorlarda ishtirokni kengaytirishda davom etmoqdamiz.</p>
-        <h3>💡 Nega Zett?</h3>
+        <h3> Nega Zett?</h3>
         <ul>
           <li>Z avlodi ruhida yaratilgan qurilmalar</li>
           <li>Ortiqcha to‘lovsiz premium texnika va qadoqlash</li>
