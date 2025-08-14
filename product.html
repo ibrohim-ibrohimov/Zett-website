@@ -95,7 +95,7 @@
 <body>
   <header class="header" id="header">
     <div class="nav-container">
-      <div class="logo">Zett</div>
+      <div class="logo"><a href="index.html#home">Zett</a></div>
       <nav class="nav-menu" id="navMenu">
         <li><a href="index.html#home">Home</a></li>
         <li><a href="index.html#catalog">Catalog</a></li>
@@ -117,6 +117,25 @@
     <h1 id="productTitle">Zett product</h1>
     <p id="productTagline"></p>
   </section>
+
+  <div class="page-back">
+  <a
+    href="catalog.html#top"
+    class="back-arrow"
+    aria-label="Back"
+    onclick="if(history.length>1){history.back();return false;}"
+  >
+    <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g fill="currentColor" fill-rule="evenodd" transform="translate(1,0)">
+        <path d="M0,8.041 C0,3.652 3.582,0.082 7.985,0.082 C12.386,0.082 15.968,3.652 15.968,8.041 C15.968,12.43 12.386,16 7.985,16 C3.582,16 0,12.43 0,8.041 Z M14.057,8.041 C14.057,4.708 11.342,1.996 8.006,1.996 C4.669,1.996 1.954,4.708 1.954,8.041 C1.954,11.374 4.67,14.086 8.006,14.086 C11.343,14.086 14.057,11.374 14.057,8.041 Z"></path>
+        <path d="M7.975,5.02 L4.071,8.022 L7.976,10.973 L7.976,8.97 L11.116,8.97 C11.461,8.97 11.907,8.646 11.907,8.015 C11.907,7.385 11.424,7.04 11.081,7.04 L7.976,7.04 L7.976,5.02 Z"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+
+
+
 
   <main class="section">
     <div class="card">
