@@ -12,6 +12,21 @@
 
   window.ZETT = { currentLang: getLang() };
 
+  function wireBackArrows(){
+  document.querySelectorAll('.back-arrow').forEach(el=>{
+    el.addEventListener('click', (e)=>{
+      e.preventDefault();
+      // prefer history if available, else fallback URL
+      if (history.length > 1) { history.back(); }
+      else {
+        const to = el.getAttribute('data-fallback') || 'index.html#home';
+        location.href = to;
+        }
+      }, {passive:false});
+    });
+  }
+
+
   function initHeader(){
     const header = $('#header');
     const hamburger = $('#hamburger');
@@ -344,6 +359,7 @@
     initLangSwitcher();
     applyCommonLanguage();
     initModalForm();
-    guardServiceSection(); // ensure Service links/cards never trigger product navigation
+    guardServiceSection();
+    wireBackArrows();
   });
 })();
