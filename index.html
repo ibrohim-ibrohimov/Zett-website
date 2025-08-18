@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TechStore - Premium Electronics</title>
+  <title>Zett</title>
   <link rel="stylesheet" href="css/app.css"/>
   <!-- keep the rest of index.html exactly as you have it; replace just the <style> in <head> -->
   <style>
@@ -179,26 +179,43 @@
   </section>
 
   <!-- Service -->
+  <!-- Service -->
   <section class="section" id="service">
     <h2 class="section-title">Service Centers</h2>
     <div class="service-centers" style="display:grid;grid-template-columns:1fr;gap:1.5rem">
       <div class="product-card service-card">
-        <div class="product-name">Tashkent Main Center</div>
+        <!-- Translated center name -->
+        <div class="product-name" id="svcName">Tashkent Main Center</div>
+
         <div class="product-info" style="padding:0">
+          <!-- Address (text translated; link kept the same) -->
           <div class="product-price" style="color:var(--text-dark);font-weight:600">
-            📍<a
-            href="https://yandex.uz/maps/10335/tashkent/?ll=69.227296%2C41.332759&mode=whatshere&whatshere%5Bpoint%5D=69.226649%2C41.332939&whatshere%5Bzoom%5D=19.14&z=19.14"
-            class="service-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            onclick="event.stopPropagation();"
-          >Olmazor, Muhokama 4</a>
+            📍
+            <a
+              id="svcAddress"
+              href="https://yandex.uz/maps/10335/tashkent/?ll=69.227296%2C41.332759&mode=whatshere&whatshere%5Bpoint%5D=69.226649%2C41.332939&whatshere%5Bzoom%5D=19.14&z=19.14"
+              class="service-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick="event.stopPropagation();"
+            >Olmazor, Muhokama 4</a>
           </div>
-          <div class="product-price" style="color:var(--text-dark);font-weight:600">📞 <a href="tel:+998712345678" style="color:var(--accent)">+998 93 045 55 54</a></div>
-          <div class="product-price" style="color:var(--text-dark);font-weight:600">🕒 Mon-Sat: 10:00-19:00</div>
+
+          <!-- Phone (text translated; href normalized from the text) -->
+          <div class="product-price" style="color:var(--text-dark);font-weight:600">
+            📞
+            <a id="svcPhone" href="tel:+998930455554" style="color:var(--accent)">+998 93 045 55 54</a>
+          </div>
+
+          <!-- Hours (translated) -->
+          <div class="product-price" style="color:var(--text-dark);font-weight:600">
+            🕒 <span id="svcHours">Mon–Sat: 10:00–19:00</span>
+          </div>
         </div>
       </div>
+    </div>
   </section>
+
 
   <!-- Footer -->
   <footer class="footer">
