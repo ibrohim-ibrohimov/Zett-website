@@ -39,7 +39,13 @@ window.ZETT_I18N = {
       title:'About Zett',
       mission:'We are committed to bringing you the latest technology with exceptional service and unbeatable quality.',
       cta:'Learn More'
-    }
+    },
+    service: {
+      centerName: 'Tashkent Main Center',
+      address: 'Tashkent, Almazar, Muhokama 4',
+      phone: '+998 93 045 55 54',
+      hours: 'Mon–Sat: 10:00–19:00'
+      }
   },
   ru: {
     nav:{home:'Главная', catalog:'Каталог', categories:'Категории', about:'О бренде', service:'Сервис'},
@@ -80,6 +86,12 @@ window.ZETT_I18N = {
       title:'О Zett',
       mission:'Мы стремимся предоставлять новейшие технологии с исключительным сервисом и качеством.',
       cta:'Узнать больше'
+    },
+    service: {
+      centerName: 'Главный центр Ташкента',
+      address: 'г.Ташкент, Алмазарский район, Мухокама 4',
+      phone: '+998 93 045 55 54',
+      hours: 'Пн–Сб: 10:00–19:00'
     }
   },
   uz: {
@@ -121,6 +133,12 @@ window.ZETT_I18N = {
       title:'Zett haqida',
       mission:'Biz eng yangi texnologiyalarni a’lo darajadagi xizmat va sifat bilan taqdim etamiz.',
       cta:'Ko‘proq bilish'
-    }
+    },
+    service: {
+      centerName: 'Toshkent markaziy servis markazi',
+      address: 'Toshkent shahar, Olmazor tumani, Muhokama 4',
+      phone: '+998 93 045 55 54',
+      hours: 'Du–Sha: 10:00–19:00'
+    },
   }
 };
