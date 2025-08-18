@@ -124,13 +124,14 @@
     const current = switcher.querySelector('.lang-flag');
     const optsContainer = switcher.querySelector('.lang-options');
 
-    const FLAG = { uz:'🇺🇿', en:'🇬🇧', ru:'🇷🇺' };
+    // Replace flags with text labels
+    const LABEL = { uz:'UZ', en:'EN', ru:'RU' };
     const ORDER = ['uz','en','ru'];
 
     function renderOptions(){
       if(!optsContainer) return;
       optsContainer.innerHTML = ORDER.map(l =>
-        `<span class="lang-flag${l===ZETT.currentLang?' active':''}" data-lang="${l}">${FLAG[l]}</span>`
+        `<span class="lang-flag${l===ZETT.currentLang?' active':''}" data-lang="${l}" aria-label="${LABEL[l]}">${LABEL[l]}</span>`
       ).join('');
       optsContainer.querySelectorAll('.lang-flag').forEach(flag=>{
         flag.addEventListener('click',(e)=>{
@@ -139,7 +140,7 @@
           if(!newLang || newLang===ZETT.currentLang) { switcher.classList.remove('open'); return; }
           ZETT.currentLang = newLang;
           setLang(newLang);
-          setEmojiFor(newLang);
+          setLabelFor(newLang);
           applyCommonLanguage();
           document.documentElement.lang = newLang;
           window.ZETT_LANG_REFRESH && window.ZETT_LANG_REFRESH(newLang);
@@ -149,11 +150,11 @@
       });
     }
 
-    function setEmojiFor(lang){
-      if(current){ current.dataset.lang = lang; current.textContent = FLAG[lang] || '🇺🇿'; }
+    function setLabelFor(lang){
+      if(current){ current.dataset.lang = lang; current.textContent = LABEL[lang] || 'UZ'; }
     }
 
-    setEmojiFor(ZETT.currentLang);
+    setLabelFor(ZETT.currentLang);
     renderOptions();
 
     on(current,'click',(e)=>{ e.stopPropagation(); switcher.classList.toggle('open'); });
