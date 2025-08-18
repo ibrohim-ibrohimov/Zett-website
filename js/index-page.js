@@ -75,6 +75,27 @@
     if(aboutTitle) aboutTitle.textContent=t.indexAbout.title;
     if(aboutMission) aboutMission.textContent=t.indexAbout.mission;
     if(aboutButton) aboutButton.textContent=t.indexAbout.cta;
+
+    // Service center translations
+    const svcT = t.service || {};
+    const svcName = document.getElementById('svcName');
+    if (svcName) svcName.textContent = svcT.centerName || svcName.textContent;
+
+    const svcAddr = document.getElementById('svcAddress');
+    if (svcAddr) svcAddr.textContent = svcT.address || svcAddr.textContent;
+
+    const svcPhone = document.getElementById('svcPhone');
+    if (svcPhone) {
+      const phoneText = svcT.phone || svcPhone.textContent || '';
+      svcPhone.textContent = phoneText;
+      // Normalize tel: from visible text (keeps “+998 93 045 55 54” readable, href dialable)
+      const digits = (phoneText.match(/\d+/g) || []).join('');
+      if (digits) svcPhone.setAttribute('href', 'tel:+' + digits);
+    }
+
+    const svcHours = document.getElementById('svcHours');
+    if (svcHours) svcHours.textContent = svcT.hours || svcHours.textContent;
+
   }
   window.ZETT_LANG_REFRESH = applyIndexLanguage;
 
