@@ -64,6 +64,17 @@ button:focus,a:focus,input:focus{outline:2px solid var(--text-primary);outline-o
   border-bottom:1px solid var(--text-light)
 }
 .logo a{ color:var(--text-primary); text-decoration:none; }
+/* === Mobile hero video === */
+.hero-mobile-video{display:none;position:absolute;inset:0;z-index:1}
+.hero-video{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+
+/* Show video only on small screens; hide carousel/overlay there */
+@media (max-width: 768px){
+  .hero-mobile-video{display:block}
+  .carousel-container,.hero-overlay,.carousel-nav{display:none !important}
+  .hero{height:100svh}
+}
+
 
 .header.scrolled{box-shadow:var(--shadow-light)}
 .nav-container{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:2rem;padding:.75rem 1rem}
@@ -81,6 +92,28 @@ button:focus,a:focus,input:focus{outline:2px solid var(--text-primary);outline-o
   color:var(--text-primary);font-weight:600;font-size:1.3rem;
   padding:1rem 2rem;border-radius:12px;transition:var(--transition);position:relative
 }
+/* === Logo image support === */
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  text-decoration: none;
+}
+.logo-img {
+  height: clamp(32px, 6vw, 56px);
+  width: auto;
+  display: block;
+}
+/* Visually hidden text for accessibility */
+.logo-text {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .nav-menu a:hover{background:var(--hover-glow);transform:translateY(-2px)}
 .nav-right{grid-column:3;justify-self:end;display:flex;align-items:center;gap:1rem;z-index:1001}
 .lang-switcher{position:relative;display:inline-flex;align-items:center;cursor:pointer}
@@ -328,3 +361,23 @@ button:focus,a:focus,input:focus{outline:2px solid var(--text-primary);outline-o
 }
 .btn-cancel:hover{border-color:var(--text-primary);color:var(--text-primary);background:var(--hover-glow)}
 @media (min-width:768px){ .modal-buttons{flex-direction:row;justify-content:center} }
+
+/* === Product page: image gallery === */
+.product-gallery{position:relative;border-radius:16px;overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+.product-track{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.product-track::-webkit-scrollbar{height:6px}
+.product-track::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:6px}
+.product-slide{flex:0 0 100%;scroll-snap-align:center;position:relative}
+.product-slide img{display:block;width:100%;height:auto;object-fit:contain;background:transparent}
+/* Keep a nice aspect on taller phones */
+@media (max-width:768px){
+  .product-slide{min-height:62vh;display:flex;align-items:center;justify-content:center}
+  .product-slide img{max-height:62vh}
+}
+@media (min-width:769px){
+  .product-slide{min-height:420px;display:flex;align-items:center;justify-content:center}
+  .product-slide img{max-height:520px}
+}
+.product-dots{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:center;gap:8px;z-index:2;pointer-events:none}
+.product-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.35);transform:scale(.9);transition:transform .2s ease,background .2s ease}
+.product-dot.active{background:rgba(255,255,255,.95);transform:scale(1.1)}
