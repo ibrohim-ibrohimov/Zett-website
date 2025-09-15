@@ -17,6 +17,25 @@
     start();
   }
 
+  function initHeroVideo(){
+  const v = document.querySelector('.hero-video');
+  if(!v) return;
+  v.muted = true; v.playsInline = true; v.loop = true;
+  v.setAttribute('muted',''); v.setAttribute('playsinline',''); v.setAttribute('loop','');
+  const tryPlay = ()=> v.play().catch(()=>{ /* ignore blocked promise */ });
+  v.addEventListener('loadedmetadata', tryPlay, { once:true });
+  v.addEventListener('canplay', tryPlay, { once:true });
+  document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) tryPlay(); });
+  v.addEventListener('ended', ()=>{ try { v.currentTime = 0; v.play(); } catch(e){} });
+  }
+
+  // somewhere you already have DOMContentLoaded:
+  document.addEventListener('DOMContentLoaded', ()=>{
+    // ...your existing init code...
+    initHeroVideo();
+  });
+
+
   function wireCTAs(){
     const seeAll = document.querySelector('.see-all-button');
     if(seeAll) seeAll.setAttribute('href','catalog.html');
@@ -101,6 +120,7 @@
 
   document.addEventListener('DOMContentLoaded', ()=>{
     initCarousel();
+    initHeroVideo();
     wireCTAs();
     animateIn();
     applyIndexLanguage();
