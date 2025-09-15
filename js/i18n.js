@@ -18,7 +18,7 @@ window.ZETT_I18N = {
       heroTitle:'About Zett', heroTag:'Technology for Generation Z. Speed. Style. Freedom.',
       bodyHTML: `
         <h2>About Zett</h2>
-        <p><strong>Zett — technologies for the new Generation Z.</strong> Speed. Style. Freedom.</p>
+        <p><strong>Zett — technologies for Z generation</strong></p>
         <p>Zett is an international electronics brand created for Gen Z — people who choose style, value freedom, and live in a digital rhythm.</p>
         <h3>We design and sell:</h3>
         <ul><li>laptops</li><li>tablets</li><li>smartphones</li><li>smart accessories</li></ul>
@@ -37,7 +37,7 @@ window.ZETT_I18N = {
     },
     indexAbout:{
       title:'About Zett',
-      mission:'We are committed to bringing you the latest technology with exceptional service and unbeatable quality.',
+      mission:'Zett — technologies for Z generation',
       cta:'Learn More'
     },
     service: {
@@ -65,7 +65,7 @@ window.ZETT_I18N = {
       heroTitle:'О бренде Zett', heroTag:'Zett — технологии нового поколения Z. Скорость. Стиль. Свобода.',
       bodyHTML: `
         <h2>О бренде Zett</h2>
-        <p><strong>Zett — технологии нового поколения Z.</strong> Скорость. Стиль. Свобода.</p>
+        <p><strong>Zett — технологии для поколения Z</strong></p>
         <p>Zett — международный бренд электроники, созданный для поколения Z — тех, кто выбирает стиль, ценит свободу и живёт в цифровом ритме.</p>
         <h3>Мы разрабатываем и продаём:</h3>
         <ul><li>ноутбуки</li><li>планшеты</li><li>смартфоны</li><li>умные аксессуары</li></ul>
@@ -84,7 +84,7 @@ window.ZETT_I18N = {
     },
     indexAbout:{
       title:'О Zett',
-      mission:'Мы стремимся предоставлять новейшие технологии с исключительным сервисом и качеством.',
+      mission:'Zett — технологии для поколения Z',
       cta:'Узнать больше'
     },
     service: {
@@ -112,7 +112,7 @@ window.ZETT_I18N = {
       heroTitle:'Zett haqida', heroTag:'Zett — Z avlodining texnologiyalari. Tezlik. Uslub. Erkinlik.',
       bodyHTML: `
         <h2>Zett haqida</h2>
-        <p><strong>Zett — Z avlodining texnologiyalari.</strong> Tezlik. Uslub. Erkinlik.</p>
+        <p><strong>Zett — texnologiyalari Z avlod uchun</strong></p>
         <p>Zett — uslubni tanlaydigan, erkinlikni qadrlaydigan va raqamli ritmda yashaydigan Z avlodi uchun yaratilgan xalqaro elektronika brendi.</p>
         <h3>Biz ishlab chiqamiz va sotamiz:</h3>
         <ul><li>noutbuklar</li><li>planshetlar</li><li>smartfonlar</li><li>aqlli aksessuarlar</li></ul>
@@ -131,7 +131,7 @@ window.ZETT_I18N = {
     },
     indexAbout:{
       title:'Zett haqida',
-      mission:'Biz eng yangi texnologiyalarni a’lo darajadagi xizmat va sifat bilan taqdim etamiz.',
+      mission:'Zett — texnologiyalari Z avlod uchun',
       cta:'Ko‘proq bilish'
     },
     service: {
