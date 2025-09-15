@@ -2,6 +2,7 @@
 window.ZETT_PRODUCTS = [
   {
     key:'laptop', category:'laptops', price:'2,590,000 so\'m', image:'laptop.png',
+    images:['laptop.png', 'laptop1.png', 'laptop2.png', 'laptop3.png', ],
     tagline:{ en:'Slim performance for study & work', ru:'Тонкая производительность для учёбы и работы', uz:'O‘qish va ish uchun ixcham unumdorlik' },
     specs:{ cpu:'Intel® Celeron 4020', gpu:'Intel UHD Graphics 600', ram:'8 GB DDR4', storage:'256 GB SSD', display:'15.6" IPS, FHD', os:'Windows 11 Pro' }
   },
@@ -12,11 +13,13 @@ window.ZETT_PRODUCTS = [
   },
   {
     key:'mouse', category:'accessories', price:'49,000 so\'m', image:'mouse.png',
+    images:['mouse.png', 'mouse1.jpg', 'mouse2.jpg', 'mouse3.jpg', ],
     tagline:{ en:'Ergonomic & precise', ru:'Эргономичная и точная', uz:'Ergonomik va aniq' },
     specs:{ sensor:'Optical 1600 / 1200 / 800 DPI', connection:'2.4 GHz Wireless', warranty:'12 months' }
   },
   {
     key:'bag', category:'accessories', price:'199,000 so\'m', image:'bag.png',
+    images:['bag.png', 'bag1.jpg', 'bag2.jpg' ],
     tagline:{ en:'Minimal carry for 15.6” devices', ru:'Минималистичная сумка для 15.6”', uz:'15.6” qurilmalar uchun sumka' },
     specs:{ material:'Echo leather', size:'15.6"', pockets:'Main + accessories', strap:'Padded shoulder', warranty:'12 months' }
   }
