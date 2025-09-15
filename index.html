@@ -70,7 +70,13 @@
   <!-- Header -->
   <header class="header" id="header">
     <div class="nav-container">
-      <div class="logo"><a href="index.html#home">Zett</a></div>
+      <div class="logo">
+        <a href="index.html#home" class="logo-link" aria-label="Zett home">
+          <img src="logo.svg" alt="Zett" class="logo-img" loading="eager" decoding="async">
+          <span class="logo-text">Zett</span>
+        </a>
+      </div>
+
       <nav class="nav-menu" id="navMenu">
         <li><a href="#home">Home</a></li>
         <li><a href="#catalog">Catalog</a></li>
@@ -90,6 +96,13 @@
 
   <!-- Hero -->
   <section class="hero" id="home" style="margin-top:var(--header-height);">
+    <!-- Mobile-only video (replaces hero on small screens) -->
+    <div class="hero-mobile-video" aria-hidden="true">
+      <video class="hero-video" autoplay muted playsinline loop preload="metadata" poster="hero-mobile-poster.jpg">
+        <source src="hero-mobile.mp4" type="video/mp4">
+      </video>
+    </div>
+
     <div class="carousel-container">
       <div class="carousel-slide active"><div>📱</div></div>
       <div class="carousel-slide"><div>💻</div></div>
