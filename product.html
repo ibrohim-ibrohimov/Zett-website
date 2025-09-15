@@ -95,7 +95,12 @@
 <body>
   <header class="header" id="header">
     <div class="nav-container">
-      <div class="logo"><a href="index.html#home">Zett</a></div>
+      <div class="logo">
+        <a href="index.html#home" class="logo-link" aria-label="Zett home">
+          <img src="logo.svg" alt="Zett" class="logo-img" loading="eager" decoding="async">
+          <span class="logo-text">Zett</span>
+        </a>
+      </div>
       <nav class="nav-menu" id="navMenu">
         <li><a href="index.html#home">Home</a></li>
         <li><a href="index.html#catalog">Catalog</a></li>
@@ -140,7 +145,10 @@
   <main class="section">
     <div class="card">
       <div class="card-body product-card">
-        <div class="product-image"><img id="productImage" src="" alt="Product image"/></div>
+        <div class="product-gallery" id="productGallery" aria-label="Product images" data-interval="3000">
+  <div class="product-track" id="productTrack"></div>
+  <div class="product-dots" id="productDots" aria-hidden="true"></div>
+</div>
         <div>
           <div class="product-title" id="cardName">Zett product</div>
           <div class="product-price" id="cardPrice">$0</div>
