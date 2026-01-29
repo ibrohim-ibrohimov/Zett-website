@@ -5,7 +5,7 @@ window.ZETT_I18N = {
     hero:{title:'Premium Electronics', subtitle:'Discover the latest in technology with unmatched quality and service', shopNow:'Shop Now'},
     sections:{featuredProducts:'Featured Products', shopByCategory:'Shop by Category', serviceCenters:'Service Centers', seeAll:'See All Products'},
     categories:{laptops:'Laptops', tablets:'Tablets', kids_bags: "Kids bags", teen_bags: "Teenage bags", accessories:'Accessories'},
-    products:{ laptop:'Zett laptop', tablet:'Zett tablet', mouse:'Zett mouse', bag:'Zett bag', school_backpack:'School backpack' },
+    products:{ laptop:'Zett laptop', tablet:'Zett tablet', mouse:'Zett mouse', bag:'Zett bag', school_backpack:'School backpack', school_backpack2:'School backpack' },
     modal:{orderNow:'Order Now', orderPrefix:'Order', name:'Full Name', phone:'Phone Number', submit:'Submit Order', cancel:'Cancel',
       success:'Order submitted successfully!', fix:'⚠️ Please fill in all fields correctly.\n\n• Name must not be empty\n• Phone number must be valid (+998 format)'
     },
@@ -52,7 +52,7 @@ window.ZETT_I18N = {
     hero:{title:'Премиум Электроника', subtitle:'Откройте для себя новейшие технологии с непревзойденным качеством и сервисом', shopNow:'Купить сейчас'},
     sections:{featuredProducts:'Рекомендуемые товары', shopByCategory:'Покупки по категориям', serviceCenters:'Сервисные центры', seeAll:'Смотреть все'},
     categories:{laptops:'Ноутбуки', tablets:'Планшеты', kids_bags: "Детские сумки", teen_bags: "Подростковые сумки", accessories:'Аксессуары'},
-    products:{ laptop:'Zett ноутбук', tablet:'Zett планшет', mouse:'Zett мышь', bag:'Zett сумка', school_backpack:'Школьный рюкзак' },
+    products:{ laptop:'Zett ноутбук', tablet:'Zett планшет', mouse:'Zett мышь', bag:'Zett сумка', school_backpack:'Школьный рюкзак', school_backpack2:'Школьный рюкзак' },
     modal:{orderNow:'Заказать', orderPrefix:'Заказ', name:'Полное имя', phone:'Номер телефона', submit:'Отправить заказ', cancel:'Отменить',
       success:'Заказ успешно отправлен!', fix:'⚠️ Пожалуйста, заполните поля корректно.\n\n• Имя не должно быть пустым\n• Номер телефона должен быть в формате +998'
     },
@@ -99,7 +99,7 @@ window.ZETT_I18N = {
     hero:{title:'Premium Elektronika', subtitle:'Eng yangi texnologiyalarni ajoyib sifat va xizmat bilan kashf eting', shopNow:'Hoziroq xarid qiling'},
     sections:{featuredProducts:'Tavsiya etilgan mahsulotlar', shopByCategory:'Kategoriya bo‘yicha xarid qilish', serviceCenters:'Servis markazlari', seeAll:'Barchasini ko‘rish'},
     categories:{laptops:'Noutbuklar', tablets:'Planshetlar', kids_bags: "Bolalar sumkasi", teen_bags: "O'smirlar sumkasi", accessories:'Aksessuarlar'},
-    products:{ laptop:'Zett noutbuk', tablet:'Zett planshet', mouse:'Zett sichqoncha', bag:'Zett sumka', school_backpack: 'Maktab ryukzaki' },
+    products:{ laptop:'Zett noutbuk', tablet:'Zett planshet', mouse:'Zett sichqoncha', bag:'Zett sumka', school_backpack: 'Maktab ryukzaki', school_backpack2: 'Maktab ryukzaki' },
     modal:{orderNow:'Buyurtma berish', orderPrefix:'Buyurtma', name:'To‘liq ism', phone:'Telefon raqami', submit:'Buyurtmani yuborish', cancel:'Bekor qilish',
       success:'Buyurtma muvaffaqiyatli yuborildi!', fix:'⚠️ Iltimos, maydonlarni to‘g‘ri to‘ldiring.\n\n• Ism bo‘sh bo‘lmasligi kerak\n• Telefon raqami +998 formatida bo‘lishi kerak'
     },
