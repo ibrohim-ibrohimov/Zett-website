@@ -381,3 +381,31 @@ button:focus,a:focus,input:focus{outline:2px solid var(--text-primary);outline-o
 .product-dots{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:center;gap:8px;z-index:2;pointer-events:none}
 .product-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.35);transform:scale(.9);transition:transform .2s ease,background .2s ease}
 .product-dot.active{background:rgba(255,255,255,.95);transform:scale(1.1)}
+
+
+/* intl-tel-input dropdown fix for dark themes */
+.iti__country-list {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.iti__country {
+  color: #000000 !important;
+}
+
+.iti__country-name,
+.iti__dial-code {
+  color: #000000 !important;
+}
+
+/* Hover & highlight */
+.iti__country:hover,
+.iti__country.iti__highlight {
+  background-color: #f2f2f2 !important;
+}
+
+/* Search input inside dropdown (if enabled later) */
+.iti__search-input {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
