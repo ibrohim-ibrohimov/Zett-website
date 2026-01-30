@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/css/intlTelInput.css"
+/>
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -102,31 +106,87 @@
   </footer>
 
   <!-- Shared modal -->
-  <!-- Shared modal -->
   <div class="modal" id="orderModal">
-    <div class="modal-content">
-      <h3 class="modal-title" id="modalTitle">Order Product</h3>
-      <form id="orderForm">
-        <div class="form-group">
-          <label for="customerName"><span id="labelCustomerName">Full Name</span></label>
-          <input type="text" id="customerName" required placeholder="e.g. Isaac Newton">
-        </div>
-        <div class="form-group">
-          <label for="customerPhone"><span id="labelCustomerPhone">Phone Number</span></label>
-          <input type="tel" id="customerPhone" value="+998" required placeholder="+998 XX XXX XX XX">
-        </div>
-        <div class="modal-buttons">
-          <button type="submit" class="btn-submit" id="btnSubmitOrder">Submit Order</button>
-          <button type="button" class="btn-cancel" id="btnCancel" onclick="closeModal()">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
+  <div class="modal-content">
+    <h3 class="modal-title" id="modalTitle">Order Product</h3>
 
+    <form id="orderForm">
+      <div class="form-group">
+        <label for="customerName">
+          <span id="labelCustomerName">Full Name</span>
+        </label>
+        <input
+          type="text"
+          id="customerName"
+          required
+          placeholder="e.g. Isaac Newton"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="customerPhone">
+          <span id="labelCustomerPhone">Phone Number</span>
+        </label>
+        <input
+          type="tel"
+          id="customerPhone"
+          required
+          placeholder="Phone number"
+        >
+      </div>
+
+      <div class="modal-buttons">
+        <button type="submit" class="btn-submit" id="btnSubmitOrder">
+          Submit Order
+        </button>
+        <button
+          type="button"
+          class="btn-cancel"
+          id="btnCancel"
+          onclick="closeModal()"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
 
   <script src="js/i18n.js"></script>
   <script src="js/products.js"></script>
   <script src="js/app.js"></script>
   <script src="js/catalog-page.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/intlTelInput.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/utils.js"></script>
+
+  <script>
+    const phoneInput = document.querySelector("#customerPhone");
+
+    const iti = window.intlTelInput(phoneInput, {
+      initialCountry: "auto",
+      geoIpLookup: function (callback) {
+        fetch("https://ipapi.co/json/")
+          .then(res => res.json())
+          .then(data => callback(data.country_code))
+          .catch(() => callback("us"));
+      },
+      separateDialCode: true,
+      nationalMode: false,
+      utilsScript:
+        "https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/utils.js",
+    });
+
+    // Optional: ensure valid phone on submit
+    document.getElementById("orderForm").addEventListener("submit", function (e) {
+      if (!iti.isValidNumber()) {
+        e.preventDefault();
+        alert("Please enter a valid phone number.");
+        phoneInput.focus();
+      }
+    });
+  </script>
+
+
 </body>
 </html>
